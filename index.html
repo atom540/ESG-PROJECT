@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="survey-container">
+      <!-- Section 1 -->
+      <div class="section" id="section1">
+        <h2>Section 1</h2>
+        <div class="question">
+        <label for="question1"
+          ><b>Question 1:</b> Governance Structure: Rate the effectiveness of your
+          organization's governance structure in overseeing ESG issues,
+          including the role of the board.</label
+        >
+        <input type="number" id="question1" />
+      </div>
+        <br />
+        <div class="question">
+        <label for="question2"
+          ><b>Question 2:</b> Processes and Controls: Evaluate the adequacy of the
+          processes and controls in place to monitor and manage ESG risks and
+          opportunities.</label
+        >
+        <input type="number" id="question2" />
+      </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary" onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section" id="section2">
+        <h2>Section 2</h2>
+        <div class="question">
+        <label for="question3"
+          ><b>Question 1:</b>ESG Integration: How effectively does your company's strategy integrate ESG considerations?</label
+        >
+        <input type="number" id="question3" />
+        </div>
+        <br />
+        <div class="question">
+        <label for="question4"
+          ><b>Question 2:</b> Long-term ESG Targets: Rate the clarity and ambition of the long-term targets your company has set to address sustainability issues.</label
+        >
+        <input type="number" id="question4" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary" onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+      <!-- Section 3 -->
+      <div class="section" id="section3">
+        <h2>Section 3</h2>
+        <div class="question">
+        <label for="question5"
+          ><b>Question 1:</b> Risk Identification Processes: Assess how effectively your company identifies, assesses, prioritizes, and manages ESG risks.</label
+        >
+        <input type="number" id="question5" />
+        </div>
+        <br />
+        <div class="question">
+        <label for="question6"
+          ><b>Question 2:</b>Integration into Overall Risk Framework: How well are ESG risks integrated into the overall risk management framework?</label
+        >
+        <input type="number" id="question6" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary"  onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section" id="section4">
+        <h2>Section 4</h2>
+        <div class="question">
+        <label for="question7"
+          ><b>Question 1:</b>ESG Metrics Tracking: Evaluate the relevance and comprehensiveness of the ESG metrics your company tracks and reports.</label
+        >
+        <input type="number" id="question7" />
+        </div>
+        <br />
+        <div class="question">
+        <label for="question8"
+          ><b>Question 2:</b>Use of Metrics in Performance Assessment: How effectively are these metrics used to assess performance against ESG targets?</label
+        >
+        <input type="number" id="question8" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary" onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section" id="section5">
+        <h2>Section 5</h2>
+        <div class="question">
+        <label for="question9"
+          ><b>Question 1:</b> Adherence to Standards: Rate how well your company's sustainability reporting follows recognized frameworks and standards.</label
+        >
+        <input type="number" id="question9" />
+        </div>
+
+        <br />
+        <div class="question">
+        <label for="question10"
+          ><b>Question 2:</b>Accuracy and Reliability: Assess the accuracy and reliability of your company's ESG reporting.</label
+        >
+        <input type="number" id="question10" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary"  onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="section" id="section6">
+        <h2>Section 6</h2>
+        <div class="question">
+        <label for="question11"
+          ><b>Question 1:</b> Engagement Effectiveness: Evaluate how effectively your company engages with stakeholders on sustainability issues.</label
+        >
+        <input type="number" id="question11" />
+        </div>
+        <br />
+        <div class="question">
+        <label for="question12"
+          ><b>Question 2:</b>Feedback Mechanisms: Rate the effectiveness of the feedback mechanisms in place for stakeholders to raise concerns or suggestions.</label
+        >
+        <input type="number" id="question12" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary" onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+
+      <div class="section" id="section7">
+        <h2>Section 7</h2>
+        <div class="question">
+        <label for="question13"
+          ><b>Question 1:</b> Implementation of ESG Initiatives: Rate the effectiveness of the ESG initiatives implemented over the past year.</label
+        >
+        <input type="number" id="question13" />
+        </div>
+        <br />
+        <div class="question">
+        <label for="question14"
+          ><b>Question 2:</b> Future ESG Performance Improvement: How well does your company plan to improve its ESG performance moving forward?</label
+        >
+        <input type="number" id="question14" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary" onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+
+      <!-- Section 8 -->
+      <div class="section" id="section8">
+        <h2>Section 8</h2>
+        <div class="question">
+        <label for="question15"
+          ><b>Question 1:</b> Compliance with Regulations: Assess your company's compliance with local and international ESG-related regulations.</label
+        >
+        <input type="number" id="question15" />
+        </div>
+        <br />
+        <div class="question">
+        <label for="question16"
+          ><b>Question 2:</b> Alignment with ESG Frameworks: Rate how well your ESG practices align with frameworks such as IFRS S1 and SASB standards.</label
+        >
+        <input type="number" id="question16" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary" onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" onclick="nextSection()">Next</button>
+        </div>
+      </div>
+
+      <!-- Section 9 -->
+      <div class="section" id="section9">
+        <h2>Section 9</h2>
+        <div class="question">
+        <label for="question17"
+          ><b>Question 1:</b>Innovation in Sustainability Efforts: Evaluate the level of innovation in your company's sustainability efforts.</label
+        >
+        <input type="number" id="question17" />
+        </div>
+        <br />
+        <div class="question">
+        <label for="question18"
+          ><b>Question 2:</b>Promotion of Continuous Improvement: How effectively does your company promote continuous improvement in its ESG practices?</label
+        >
+        <input type="number" id="question18" />
+        </div>
+        <br />
+        <div class="button_page">
+        <button type="button" class="btn btn-primary" type="button" class="btn btn-primary" onclick="previousSection()">Previous</button>
+        <button type="button" class="btn btn-primary" type="button" class="btn btn-primary" onclick="collectResponses()">Submit</button>
+      </div>
+      </div>
+
+      <div class="response" id="responseContainer"></div>
+      <div class="progress" id="progress">
+        <div class="progress-bar" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
