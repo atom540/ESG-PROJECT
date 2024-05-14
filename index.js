@@ -1,5 +1,5 @@
 let currentSection = 1;
-const totalSections = 9;
+const totalSections = 5;
 function nextSection() {
   const currentSectionElement = document.getElementById('section' + currentSection);
    const inputs1 = currentSectionElement.querySelectorAll('input');
@@ -8,6 +8,10 @@ function nextSection() {
        alert('Please fill in all Qusetion fields before proceeding.');
        return; 
      }
+     if (isNaN(inputs1[i].value) || inputs1[i].value < 1 || inputs1[i].value > 10) {
+      alert('Please enter a number between 1 and 10 for all question fields.');
+      return;
+    }
    }
 
  
@@ -34,7 +38,6 @@ function previousSection() {
     const previousSectionElement = document.getElementById('section' + currentSection);
     previousSectionElement.style.display = 'block';
 
-    // Update progress bar
     updateProgressBar();
   }
 }
@@ -64,7 +67,6 @@ function collectResponses() {
   }
 
 
-// Hide all sections except the first one initially
 document.querySelectorAll('.section').forEach((section, index) => {
   if (index !== 0) {
     section.style.display = 'none';
