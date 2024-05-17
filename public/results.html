@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="survey-container">
+    <h2>Survey Results</h2>
+    <pre id="responseContainer"></pre>
+    <a href="/">Back to Survey</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/api/results')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('responseContainer').textContent = JSON.stringify(data, null, 2);
+        });
+    });
+  </script>
+</body>
+</html>

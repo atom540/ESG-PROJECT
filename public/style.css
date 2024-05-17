@@ -9,7 +9,6 @@ body {
     max-width: 80%;
     margin: 0 auto;
     padding-top: 2rem;
-    overflow-y: scroll;
   }
   
   .section {
@@ -20,9 +19,14 @@ body {
     display: block;
   }
   .response{
-    display :none;
     width: 80vw;
     height: fit-content;
+  }
+  .result{
+    width: 80vw;
+    height: fit-content;
+    /* display :none; */
+    display :block;
   }
   .progress{
     width: 50%;

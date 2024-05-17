@@ -42,29 +42,32 @@ function previousSection() {
   }
 }
 
-function collectResponses() {
- 
-    const responses = {};
-    const currentSectionElement = document.getElementById('section' + currentSection);
-    currentSectionElement.style.display = 'none';
-    const responseElement = document.getElementById('responseContainer');
-    responseElement.style.display='block'; 
-    const progressbarElement = document.getElementById('progress')
-    progressbarElement.style.display='none'
-    for (let i = 1; i <= currentSection; i++) {
-      const sectionElement = document.getElementById('section' + i);
-      const inputs = sectionElement.querySelectorAll('input');
-      
-      inputs.forEach(input => {
-        responses[input.id] = input.value;
-      });
-    }
 
-    const jsonResponse = JSON.stringify(responses);
-    const responseContainer = document.getElementById('responseContainer');
-    responseContainer.textContent = jsonResponse;
-    console.log(jsonResponse);
+function submitSurvey() {
+  const responses = {};
+
+
+  for (let i = 1; i <= totalSections; i++) {
+    const sectionElement = document.getElementById('section' + i);
+    const inputs = sectionElement.querySelectorAll('input');
+    
+    inputs.forEach(input => {
+      responses[input.id] = input.value;
+    });
   }
+
+  fetch('/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(responses),
+  }).then(response => response.json()).then(data => {
+       console.log(data);
+      window.location.href = '/results';
+  });
+  
+}
 
 
 document.querySelectorAll('.section').forEach((section, index) => {
